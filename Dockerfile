@@ -8,6 +8,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-EXPOSE 32000
-
-CMD ["gunicorn", "-b", "0.0.0.0:32000", "wsgi:app"]
+CMD gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 wsgi:app
