@@ -6,6 +6,6 @@ def create_app():
 
     @app.route("/")
     def main():
-        return "Python Flask: Hello World Testing Branch"
+        return "Python Flask: Hello World"
 
     return app
